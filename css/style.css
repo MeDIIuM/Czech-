@@ -1,0 +1,80 @@
+body {
+	margin-top: 0;
+	background-color: #F0FFF0;
+	color: #2F4F4F;
+	width: 100%;
+}
+table{
+	margin: auto;
+	width: 80%;
+	border: 0;
+}
+.header{
+
+	height: 250px;
+	width: 100%;
+}
+.navigation{
+	float: left;
+	height: 40px;
+	width: 130px;
+}
+.text{
+	font-size: large;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+	width: 80%;
+}
+.footer{
+	background-color: #F0FFF0;
+	color: #778899;
+	padding-top: 15%;
+	padding-left: 10%;
+	padding-right: 10%;
+	text-align: center;
+	width: 100%;
+}
+h1{
+	color: #2E8B57;
+}
+h3{
+	margin-left: 60px;
+}
+.foto1 {
+	text-align: center;
+	margin-left: 50px;
+	width: 250px;
+	height: 250px;
+}
+.temp{
+	margin-right: 140px;
+	text-align: center;
+	margin-top: 50px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.kontakt{
+	font-size: large;
+	color:#483D8B ;
+}
+.preh{
+	margin-top: 50px;
+	text-align: center;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+h1{
+	padding-top: 20px;
+}
+td select,
+td input {
+	width: 150px;
+}
+.js{
+	padding-top: 20px;
+}
+#but{
+	margin-top: 1%;
+	margin-left: 10%;
+}

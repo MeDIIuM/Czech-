@@ -1,0 +1,164 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ubytování</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script language="JavaScript">
+		function myFunction() {
+			var x = document.getElementById("tour").value;
+			var y = document.getElementById("room").value;
+			var z = document.getElementById("ch1").checked;
+			var a = document.getElementById("ch2").checked;
+			var s = document.getElementById("ch3").checked;
+			var o = document.getElementById("ch4").checked;
+			var p = document.getElementById("day").value;
+			if(z == true){
+				z = 100;
+			}
+			if(z == false){
+				z=0;
+			}
+			if(a == true){
+				a = 120;
+			}
+			if(a == false){
+				a=0;
+			}
+			if(s == true){
+				s = 500;
+			}
+			if(s == false){
+				s=0;
+			}
+			if(o == true){
+				o = 0.9;
+			}
+			if(o == false){
+				o=1;
+			}
+			x=parseFloat(x);
+			y=parseFloat(y);
+			z=parseFloat(z);
+			a=parseFloat(a);
+			s=parseFloat(s);
+			o=parseFloat(o);
+			p=parseFloat(p);
+			result=(x+y+z+a+s)*o*p;
+			result=parseFloat(result)
+			document.getElementById("result").innerHTML = result;
+		}
+	</script>
+</head>
+<body>
+<table>
+	<tr>
+		<td colspan="5">
+			<img class="header" src="img/bajkal.jpg">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<a href="index.html"> <img class="navigation" src="img/uvod.png"> </a>
+		</td>
+		<td>
+			<a href="foto.html"> <img class="navigation" src="img/foto.png"> </a>
+		</td>
+		<td>
+			<a href="prehled.html"> <img class="navigation" src="img/prehled.png"> </a>
+		</td>
+		<td>
+			<a href="ubytovani.html"> <img class="navigation" src="img/ubytovani.png"> </a>
+		</td>
+		<td>
+			<a href="kontakty.html"> <img class="navigation" src="img/kontakty.png"> </a>
+	</tr>
+</table>
+<form>
+	<table class="js">
+		<tr>
+			<td>
+				<h2>Vpočet ceny ( 1 osoba, 1 den)</h2>
+			</td>
+		</tr>
+		<tr>
+			<td>Jméno a Príjmení:</td>
+			<td>
+				<input name="Name" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td>
+				<input name="mail" type="email">
+			</td>
+		</tr>
+		<tr>
+			<td>Typ balíčku:</td>
+			<td>
+				<select id="tour">
+					<option></option>
+					<option value="1000">Minimum</option>
+					<option value="1200">Minimum +</option>
+					<option value="1500">Pro pár</option>
+					<option value="1400">Rodina s dětmi – dospělý</option>
+					<option value="500">Rodina s dětmi – dítě</option>
+					<option value="2100">Komfort</option>
+					<option value="4000">Luxus</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Typ pokoje:</td>
+			<td>
+				<select id="room">
+					<option></option>
+					<option value="1000">1 lůžkový</option>
+					<option value="1500">1 lůžkový KOMFORT</option>
+					<option value="1600">2 lůžkový (1 osoby)</option>
+					<option value="1000">2 lůžkový (2 osoby)</option>
+					<option value="1700">Manželský pokoj</option>
+					<option value="1500">Rodinný pokoj – dospělý</option>
+					<option value="600">Rodinný pokoj – dítě</option>
+					<option value="3000">Luxusní apartmány</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Dodatečný oběd</td>
+			<td>
+				<INPUT TYPE="checkbox" id="ch1">
+			</td>
+		</tr>
+		<tr>
+			<td>Dodatečná večeři</td>
+			<td>
+				<INPUT TYPE="checkbox" id="ch2">
+			</td>
+		</tr>
+		<tr>
+			<td>Chci transfer</td>
+			<td>
+				<INPUT TYPE="checkbox" id="ch3">
+			</td>
+		</tr>
+		<tr>
+			<td>Jsem student</td>
+			<td>
+				<INPUT TYPE="checkbox" id="ch4">
+			</td>
+		</tr>
+		<tr>
+			<td>Počet dní</td>
+			<td>
+				<input id="day" type="number" min="1" max="30" value="1">
+			</td>
+		</tr>
+		<tr>
+			<td>Výše ceny</td>
+			<td><p id="result"></p></td>
+		</tr>
+	</table>
+	<input id="but" type="button" onclick="myFunction()" value="Result">
+</form>
+</body>
+</html>
